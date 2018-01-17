@@ -59,7 +59,7 @@ $wgResourceModules['ext.yasec'] = array(
     // If your scripts need code from other modules, list their identifiers as dependencies
     // and ResourceLoader will make sure they're loaded before you.
     // You don't need to manually list 'mediawiki' or 'jquery', which are always loaded.
-    'dependencies' => array( 'jquery.ui.datepicker' ),
+    //'dependencies' => array( 'jquery.ui.datepicker' ),
 
     // You need to declare the base path of the file paths in 'scripts' and 'styles'
     'localBasePath' => __DIR__ . '/resources',
@@ -76,8 +76,8 @@ $wgResourceModules['ext.yasec'] = array(
 # Set to false to use the normal amount of page caching (most efficient),
 # set to 0 to disable cache altogether (inefficient, but results will never
 # be outdated)
-$wgECMaxCacheTime = 60*60*24;   // How long to cache pages in seconds
-
+// $wgECMaxCacheTime = 60*60*24;   // How long to cache pages in seconds
+ $wgECMaxCacheTime = 0;
 
 $wgHooks['ParserFirstCallInit'][] = 'wfEventCalendar';
 /**
