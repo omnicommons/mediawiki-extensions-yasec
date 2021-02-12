@@ -180,7 +180,7 @@ function renderEventCalendar( $input, $args, $mwParser ) {
         }
 
         // minimal interval is one day
-        $tempdate = date_create( $date );
+        if (! ($tempdate = date_create( $date ))) continue;
         date_add( $tempdate, date_interval_create_from_date_string( '1 day' ));
         $enddate = date_format( $tempdate, 'Y-m-d' );
 
